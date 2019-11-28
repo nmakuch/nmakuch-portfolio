@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2263,7 +2263,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @emotion/core */ "@emotion/core");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_emotion_core__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
 
 
 
@@ -2273,14 +2275,45 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/nickmakuch/Documents/Code/nmakuch-portfolio/pages/index.js";
+
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
 
+// this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
+
+/** @jsx jsx */
 
 
+
+const homeStyles = _emotion_core__WEBPACK_IMPORTED_MODULE_9__["css"]`
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+
+  button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  section {
+    padding: 75px 25px;
+  }
+`;
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   const {
     0: status,
@@ -2356,146 +2389,191 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
     handleResponse(res.status, text);
   };
 
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: undefined
-  }, __jsx("main", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
-  }, __jsx("section", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "row",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "col-md-12 col-sm-12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "block",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: undefined
-  }, __jsx("form", {
-    onSubmit: handleOnSubmit,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: undefined
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: undefined
-  }, __jsx("h5", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: undefined
-  }, __jsx("label", {
-    htmlFor: "email",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: undefined
-  }, "Email")), __jsx("input", {
-    id: "email",
-    type: "email",
-    onChange: handleOnChange,
-    required: true,
-    value: inputs.email,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
-  })), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: undefined
-  }, __jsx("h5", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: undefined
-  }, __jsx("label", {
-    htmlFor: "message",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: undefined
-  }, "Message")), __jsx("textarea", {
-    id: "message",
-    onChange: handleOnChange,
-    required: true,
-    value: inputs.message,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: undefined
-  })), __jsx("button", {
-    type: "submit",
-    disabled: status.submitting,
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_components_Layout__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    contentClass: homeStyles,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 93
     },
     __self: undefined
-  }, !status.submitting ? !status.submitted ? "Submit" : "Submitted" : "Submitting...")))))), status.info.error && __jsx("div", {
-    className: "error",
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 94
     },
     __self: undefined
-  }, "Error: ", status.info.msg), !status.info.error && status.info.msg && __jsx("div", {
-    className: "success",
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("section", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "col-md-8 offset-md-2 col-sm-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "block",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: undefined
+  }, "Site is under construction"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: undefined
+  }, "Note:"), " If you'd like to get in touch, you can fill out the form below and I'll get back to you.")))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "col-md-8 offset-md-2 col-sm-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 109
     },
     __self: undefined
-  }, status.info.msg))));
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "block",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("form", {
+    onSubmit: handleOnSubmit,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "form-group",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("h5", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("label", {
+    htmlFor: "email",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 114
+    },
+    __self: undefined
+  }, "Email")), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("input", {
+    id: "email",
+    type: "email",
+    className: "form-control",
+    onChange: handleOnChange,
+    required: true,
+    value: inputs.email,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
+    },
+    __self: undefined
+  })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "form-group-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("h5", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: undefined
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("label", {
+    htmlFor: "message",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127
+    },
+    __self: undefined
+  }, "Message")), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("textarea", {
+    id: "message",
+    className: "form-control",
+    rows: "4",
+    onChange: handleOnChange,
+    required: true,
+    value: inputs.message,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: undefined
+  })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("button", {
+    type: "submit",
+    disabled: status.submitting,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138
+    },
+    __self: undefined
+  }, !status.submitting ? !status.submitted ? "Submit" : "Submitted" : "Submitting..."), status.info.error && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "error",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: undefined
+  }, "Error: ", status.info.msg), !status.info.error && status.info.msg && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])("div", {
+    className: "success",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 149
+    },
+    __self: undefined
+  }, status.info.msg)))))))));
 });
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

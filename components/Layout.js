@@ -2,7 +2,7 @@
 /** @jsx jsx */
 
 import React from "react";
-import { jsx, css, Global } from "@emotion/core";
+import { jsx, Global } from "@emotion/core";
 import NavBar from "../components/NavBar";
 import Head from "next/head";
 
