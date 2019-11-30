@@ -5,6 +5,16 @@ import { Component } from "react";
 import Link from "next/link";
 import Logo from "../components/Logo";
 
+const navbarStyles = css`
+margin: 40px 0;
+padding: 0 !important;
+
+a {
+    padding: 0;
+    font-size: 18px;
+}
+`;
+
 class Nav extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +37,7 @@ class Nav extends Component {
       ? "navbar-toggler navbar-toggler-right collapsed"
       : "navbar-toggler navbar-toggler-right";
     return (
-      <nav className="navbar navbar-expand-lg navbar-light transparent-nav">
+      <nav css={navbarStyles} className="navbar navbar-expand-lg navbar-light transparent-nav">
         <div className="container">
           <a className="navbar-brand" href="/">
             <Logo />
@@ -54,6 +64,10 @@ class Nav extends Component {
                   font-weight: 500;
                 }
 
+                a:hover {
+                    text-decoration: none;
+                }
+
                 @media only screen and (max-width: 992px) {
                   a {
                     margin-left: 0;
@@ -67,11 +81,11 @@ class Nav extends Component {
                 <a>Portfolio</a>
               </Link>
 
-              <Link href="/terms" as="/terms">
+              <Link href="/about" as="/about">
                 <a>About</a>
               </Link>
 
-              <Link href="/faq" as="/faq">
+              <Link href="/contact" as="/contact">
                 <a>Contact Me</a>
               </Link>
             </div>
