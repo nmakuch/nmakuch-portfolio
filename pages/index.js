@@ -2,53 +2,22 @@
 /** @jsx jsx */
 
 import { jsx, css } from "@emotion/core";
-import { useState } from "react";
+import PortfolioItem from "../components/PortfolioItem";
 import Layout from "../components/Layout";
+import BannerH1 from "../components/BannerH1";
 
 const homeStyles = css`
-  section#banner-h1 {
-    padding: 50px 25px;
-
-    h1 {
-      font-size: 36px;
-      font-weight: 600;
-      text-align: center;
-      line-height: 48px;
-    }
-  }
-
   section#portfolio-grid {
     padding: 75px 0;
 
-    h2 {
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-
-    .row {
-      padding: 0 15px;
-    }
-
     .col-6 {
-      padding: 0 2px;
-      text-align: center;
+      padding-bottom: 6px;
     }
-
-    .box {
-      background-color: #ffcccc;
-      padding: 75px;
+    .col-6:first-of-type {
+      padding-right: 3px;
     }
-
-    img {
-      width: 100%;
-    }
-
-    p {
-      font-size: 14px;
-      font-weight: 400;
-      margin-bottom: 50px;
+    .col-6:last-of-type {
+      padding-left: 3px;
     }
   }
 `;
@@ -58,40 +27,40 @@ export default () => {
     <Layout contentClass={homeStyles}>
       <main>
         {/* Banner h1 section start */}
-        <section id="banner-h1">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 col-sm-12">
-                <div className="block">
-                  <h1>
-                    Hi, I'm Nick Makuch! I'm an interaction designer based out
-                    of Ottawa, Ontario. I make websites, graphics and videos.
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <BannerH1 />
         {/* Banner h1 section end */}
 
         {/* Portfolio grid start */}
         <section id="portfolio-grid">
           <div className="container">
             <div className="row">
-              <div className="col-6 portfolio-item">
-                <div className="box">
-                  <h2>Rosie's Maid Service</h2>
-                  <p>Web-Design / Front-end development</p>
-                  <img src="img/rosies-ms.png" />
-                </div>
-              </div>
-              <div className="col-6 portfolio-item">
-                <div className="box">
-                  <h2>Rosie's Maid Service</h2>
-                  <p>Web-Design / Front-end development</p>
-                  <img src="img/rosies-ms.png" />
-                </div>
-              </div>
+              <PortfolioItem
+                itemTitle="Rosie's Maid Service"
+                itemSubTitle="Web-Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/rosies-ms.png"
+              />
+              <PortfolioItem
+                itemTitle="Rosie and Company"
+                itemSubTitle="Web-Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/rosie-and-company.png"
+              />
+            </div>
+
+            <div className="row">
+              <PortfolioItem
+                itemTitle="Rosie's Maid Service"
+                itemSubTitle="Web-Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/rosies-ms.png"
+              />
+              <PortfolioItem
+                itemTitle="Rosie and Company"
+                itemSubTitle="Web-Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/rosie-and-company.png"
+              />
             </div>
           </div>
         </section>

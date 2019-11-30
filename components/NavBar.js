@@ -62,10 +62,13 @@ class Nav extends Component {
                   color: #333;
                   font-size: 16px;
                   font-weight: 500;
+                  transition: color 0.7s ease;
                 }
 
                 a:hover {
                     text-decoration: none;
+                    color: #d64343;
+                    transition: color 0.7s ease;
                 }
 
                 @media only screen and (max-width: 992px) {
