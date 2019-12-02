@@ -47,7 +47,7 @@ class PortfolioItem extends React.Component {
             margin-bottom: 50px;
           }
         `}
-        className="col-6 portfolio-item"
+        className="col-md-6 portfolio-item"
       >
         <a href={this.props.itemLink}>
           <div className="box">

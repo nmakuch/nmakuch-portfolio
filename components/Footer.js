@@ -6,6 +6,12 @@ import { css, jsx } from "@emotion/core";
 import Link from "next/link";
 
 const footerStyles = css`
+  @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+  .social-icon {
+    font-size: 40px;
+  }
+
   footer a {
     color: #595959;
   }
@@ -22,23 +28,18 @@ const footerStyles = css`
 
   footer .footer-manu ul li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0 25px 60px 25px;
   }
 
   footer .footer-manu ul li a {
     display: inline-block;
-    color: #494949;
+    color: #333;
+    transition: color 0.7s ease;
   }
 
   footer .footer-manu ul li a:hover {
-    color: #007bff;
-  }
-
-  p {
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 50px;
+    color: #c03a3a;
+    transition: color 0.7s ease;
   }
 `;
 
@@ -53,28 +54,39 @@ class Footer extends React.Component {
                 <div className="footer-manu">
                   <ul>
                     <li>
-                      <Link href="/" as="/">
-                        <a>Twitter</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services" as="/services">
-                        <a>LinkedIn</a>
+                      <Link href="#" as="#">
+                        <a className="social-icon">
+                          {" "}
+                          <i className="fa fa-twitter-square"></i>
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/faq" as="/faq">
-                        <a>Github</a>
+                        <a className="social-icon">
+                          {" "}
+                          <i className="fa fa-github-square"></i>
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services" as="/services">
+                        <a className="social-icon">
+                          {" "}
+                          <i className="fa fa-linkedin-square"></i>
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contact" as="/contact">
-                        <a>Email</a>
+                      <a className="social-icon">
+                          {" "}
+                          <i className="fa fa-envelope-square"></i>
+                        </a>
                       </Link>
                     </li>
                   </ul>
                 </div>
-                <p>Copyright &copy;, Nick Makuch 2019</p>
               </div>
             </div>
           </div>

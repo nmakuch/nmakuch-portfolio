@@ -10,14 +10,23 @@ const homeStyles = css`
   section#portfolio-grid {
     padding: 75px 0;
 
-    .col-6 {
+    .col-md-6 {
       padding-bottom: 6px;
     }
-    .col-6:first-of-type {
+    .col-md-6:first-of-type {
       padding-right: 3px;
     }
-    .col-6:last-of-type {
+    .col-md-6:last-of-type {
       padding-left: 3px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    section#portfolio-grid {
+      .col-sm-12, .col-md-6 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
     }
   }
 `;
@@ -35,14 +44,29 @@ export default () => {
           <div className="container">
             <div className="row">
               <PortfolioItem
+                itemTitle="CRA Claim Tax Benefits"
+                itemSubTitle="Interaction Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/claim-tax-benefits.png"
+              />
+              <PortfolioItem
                 itemTitle="IRCC Rescheduler"
                 itemSubTitle="Interaction Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/ircc-rescheduler.png"
               />
+            </div>
+
+            <div className="row">
+              <PortfolioItem
+                itemTitle="Security Goals UI"
+                itemSubTitle="Interface Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/security-goals.png"
+              />
               <PortfolioItem
                 itemTitle="Rosie's Maid Service"
-                itemSubTitle="Web-Design / Front-End Development"
+                itemSubTitle="Web Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/rosies-ms.png"
               />
@@ -50,16 +74,31 @@ export default () => {
 
             <div className="row">
               <PortfolioItem
-                itemTitle="CRA Claim Tax Benefits"
-                itemSubTitle="Interaction Design / Front-End Development"
-                itemLink="#"
-                itemImage="img/claim-tax-benefits.png"
-              />
-              <PortfolioItem
                 itemTitle="Rosie and Company"
-                itemSubTitle="Web-Design / Front-End Development"
+                itemSubTitle="Web Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/rosie-and-company.png"
+              />
+              <PortfolioItem
+                itemTitle="Roberto and Rob"
+                itemSubTitle="Character Modelling / 3D Animation"
+                itemLink="#"
+                itemImage="img/roberto-and-rob.png"
+              />
+            </div>
+
+            <div className="row">
+              <PortfolioItem
+                itemTitle="A Leading Sport Nation"
+                itemSubTitle="Production Assistant / Video Editing"
+                itemLink="#"
+                itemImage="img/leading-sport-nation.png"
+              />
+              <PortfolioItem
+                itemTitle="Manion's Mud Logo"
+                itemSubTitle="Company Branding / Logo Design"
+                itemLink="#"
+                itemImage="img/manions-mud.png"
               />
             </div>
           </div>
