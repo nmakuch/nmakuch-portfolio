@@ -4,6 +4,7 @@
 import React from "react";
 import { css, jsx, Global } from "@emotion/core";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import Head from "next/head";
 import "./fonts.js";
 
@@ -42,6 +43,7 @@ class Layout extends React.Component {
         <div>
           <div css={this.props.contentClass}>{this.props.children}</div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

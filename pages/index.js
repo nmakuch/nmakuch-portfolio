@@ -35,25 +35,25 @@ export default () => {
           <div className="container">
             <div className="row">
               <PortfolioItem
+                itemTitle="IRCC Rescheduler"
+                itemSubTitle="Interaction Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/ircc-rescheduler.png"
+              />
+              <PortfolioItem
                 itemTitle="Rosie's Maid Service"
                 itemSubTitle="Web-Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/rosies-ms.png"
-              />
-              <PortfolioItem
-                itemTitle="Rosie and Company"
-                itemSubTitle="Web-Design / Front-End Development"
-                itemLink="#"
-                itemImage="img/rosie-and-company.png"
               />
             </div>
 
             <div className="row">
               <PortfolioItem
-                itemTitle="Rosie's Maid Service"
-                itemSubTitle="Web-Design / Front-End Development"
+                itemTitle="CRA Claim Tax Benefits"
+                itemSubTitle="Interaction Design / Front-End Development"
                 itemLink="#"
-                itemImage="img/rosies-ms.png"
+                itemImage="img/claim-tax-benefits.png"
               />
               <PortfolioItem
                 itemTitle="Rosie and Company"
