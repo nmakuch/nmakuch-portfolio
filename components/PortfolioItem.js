@@ -39,6 +39,8 @@ class PortfolioItem extends React.Component {
 
           img {
             width: 100%;
+            -webkit-filter: drop-shadow(5px 5px 5px #222);
+            filter: drop-shadow(2px 4px 4px rgb(100,100,100, ${this.props.dropOpacity}));
           }
 
           p {

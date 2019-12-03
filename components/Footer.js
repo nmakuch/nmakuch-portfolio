@@ -28,7 +28,7 @@ const footerStyles = css`
 
   footer .footer-manu ul li {
     display: inline-block;
-    padding: 0 25px 60px 25px;
+    padding: 0 25px 15px 25px;
   }
 
   footer .footer-manu ul li a {
@@ -40,6 +40,12 @@ const footerStyles = css`
   footer .footer-manu ul li a:hover {
     color: #c03a3a;
     transition: color 0.7s ease;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
   }
 `;
 
@@ -86,6 +92,7 @@ class Footer extends React.Component {
                       </Link>
                     </li>
                   </ul>
+                  <p>Nick Makuch, copyright &copy; 2019</p>
                 </div>
               </div>
             </div>

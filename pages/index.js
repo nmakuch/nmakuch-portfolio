@@ -8,7 +8,7 @@ import BannerH1 from "../components/BannerH1";
 
 const homeStyles = css`
   section#portfolio-grid {
-    padding: 75px 0;
+    padding: 50px 0;
 
     .col-md-6 {
       padding-bottom: 6px;
@@ -48,12 +48,14 @@ export default () => {
                 itemSubTitle="Interaction Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/claim-tax-benefits.png"
+                dropOpacity="0.6"
               />
               <PortfolioItem
                 itemTitle="IRCC Rescheduler"
                 itemSubTitle="Interaction Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/ircc-rescheduler.png"
+                dropOpacity="0.2"
               />
             </div>
 
@@ -63,12 +65,14 @@ export default () => {
                 itemSubTitle="Interface Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/security-goals.png"
+                dropOpacity="0.6"
               />
               <PortfolioItem
                 itemTitle="Rosie's Maid Service"
                 itemSubTitle="Web Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/rosies-ms.png"
+                dropOpacity="0.6"
               />
             </div>
 
@@ -78,12 +82,14 @@ export default () => {
                 itemSubTitle="Web Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/rosie-and-company.png"
+                dropOpacity="0.2"
               />
               <PortfolioItem
                 itemTitle="Roberto and Rob"
                 itemSubTitle="Character Modelling / 3D Animation"
                 itemLink="#"
                 itemImage="img/roberto-and-rob.png"
+                dropOpacity="0.6"
               />
             </div>
 
@@ -93,12 +99,14 @@ export default () => {
                 itemSubTitle="Production Assistant / Video Editing"
                 itemLink="#"
                 itemImage="img/leading-sport-nation.png"
+                dropOpacity="0.6"
               />
               <PortfolioItem
                 itemTitle="Manion's Mud Logo"
                 itemSubTitle="Company Branding / Logo Design"
                 itemLink="#"
                 itemImage="img/manions-mud.png"
+                dropOpacity="0.6"
               />
             </div>
           </div>
