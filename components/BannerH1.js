@@ -16,6 +16,19 @@ class BannerH1 extends React.Component {
             text-align: center;
             line-height: 48px;
           }
+
+          @media only screen and (max-width: 767px) {
+            h1 {
+              font-size: 30px;
+              font-weight: 600;
+              text-align: center;
+              line-height: 42px;
+            }
+
+            .disappear {
+              display: none;
+            }
+          }
         `}
         id="banner-h1"
       >
@@ -25,7 +38,7 @@ class BannerH1 extends React.Component {
               <div className="block">
                 <h1>
                   Hi, I'm Nick Makuch! I'm an interaction designer based out of
-                  Ottawa, Ontario. I make websites, graphics and videos.
+                  Ottawa, Ontario.<span className="disappear"> I make websites, graphics and videos.</span>
                 </h1>
               </div>
             </div>

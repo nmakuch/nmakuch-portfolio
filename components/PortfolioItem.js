@@ -40,13 +40,23 @@ class PortfolioItem extends React.Component {
           img {
             width: 100%;
             -webkit-filter: drop-shadow(5px 5px 5px #222);
-            filter: drop-shadow(2px 4px 4px rgb(100,100,100, ${this.props.dropOpacity}));
+            filter: drop-shadow(
+              2px 4px 4px rgb(100, 100, 100, ${this.props.dropOpacity})
+            );
           }
 
           p {
             font-size: 14px;
             font-weight: 400;
             margin-bottom: 50px;
+          }
+
+          @media only screen and (max-width: 991px) {
+            a {
+              .box {
+                padding: 50px;
+              }
+            }
           }
         `}
         className="col-md-6 portfolio-item"

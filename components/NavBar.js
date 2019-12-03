@@ -6,13 +6,27 @@ import Link from "next/link";
 import Logo from "../components/Logo";
 
 const navbarStyles = css`
-margin: 40px 0;
-padding: 0 !important;
+  margin: 40px 0;
+  padding: 0 !important;
 
-a {
+  a {
     padding: 0;
     font-size: 18px;
-}
+  }
+
+  @media only screen and (max-width: 991px) {
+    .container {
+      padding: 0 50px !important;
+      max-width: 1200px !important;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .container {
+      padding: 0 20px !important;
+      max-width: 600px !important;
+    }
+  }
 `;
 
 class Nav extends Component {
@@ -37,7 +51,10 @@ class Nav extends Component {
       ? "navbar-toggler navbar-toggler-right collapsed"
       : "navbar-toggler navbar-toggler-right";
     return (
-      <nav css={navbarStyles} className="navbar navbar-expand-lg navbar-light transparent-nav">
+      <nav
+        css={navbarStyles}
+        className="navbar navbar-expand-lg navbar-light transparent-nav"
+      >
         <div className="container">
           <a className="navbar-brand" href="/">
             <Logo />
@@ -66,9 +83,9 @@ class Nav extends Component {
                 }
 
                 a:hover {
-                    text-decoration: none;
-                    color: #d64343;
-                    transition: color 0.7s ease;
+                  text-decoration: none;
+                  color: #d64343;
+                  transition: color 0.7s ease;
                 }
 
                 @media only screen and (max-width: 992px) {

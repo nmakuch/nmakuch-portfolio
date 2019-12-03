@@ -21,11 +21,36 @@ const homeStyles = css`
     }
   }
 
+  @media only screen and (max-width: 991px) {
+    section#portfolio-grid {
+      .container {
+        max-width: 1200px !important;
+      }
+    }
+  }
+
   @media only screen and (max-width: 767px) {
     section#portfolio-grid {
-      .col-sm-12, .col-md-6 {
+      .col-sm-12,
+      .col-md-6 {
         padding-right: 0 !important;
         padding-left: 0 !important;
+      }
+      .container {
+        max-width: 500px !important;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 515px) {
+    section#portfolio-grid {
+      .col-sm-12,
+      .col-md-6 {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+      }
+      .container {
+        max-width: 550px !important;
       }
     }
   }
@@ -44,31 +69,31 @@ export default () => {
           <div className="container">
             <div className="row">
               <PortfolioItem
-                itemTitle="CRA Claim Tax Benefits"
-                itemSubTitle="Interaction Design / Front-End Development"
+                itemTitle="Claim tax benefits"
+                itemSubTitle="IX Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/claim-tax-benefits.png"
                 dropOpacity="0.6"
               />
               <PortfolioItem
-                itemTitle="IRCC Rescheduler"
-                itemSubTitle="Interaction Design / Front-End Development"
+                itemTitle="Compliance UI"
+                itemSubTitle="IX Design / Front-End Development"
                 itemLink="#"
-                itemImage="img/ircc-rescheduler.png"
-                dropOpacity="0.2"
+                itemImage="img/security-goals.png"
+                dropOpacity="0.6"
               />
             </div>
 
             <div className="row">
               <PortfolioItem
-                itemTitle="Security Goals UI"
-                itemSubTitle="Interface Design / Front-End Development"
+                itemTitle="Rosie and Company: Dog Walking"
+                itemSubTitle="Web Design / Front-End Development"
                 itemLink="#"
-                itemImage="img/security-goals.png"
-                dropOpacity="0.6"
+                itemImage="img/rosie-and-company.png"
+                dropOpacity="0.2"
               />
               <PortfolioItem
-                itemTitle="Rosie's Maid Service"
+                itemTitle="Rosie and Company: Maid Service"
                 itemSubTitle="Web Design / Front-End Development"
                 itemLink="#"
                 itemImage="img/rosies-ms.png"
@@ -78,10 +103,10 @@ export default () => {
 
             <div className="row">
               <PortfolioItem
-                itemTitle="Rosie and Company"
-                itemSubTitle="Web Design / Front-End Development"
+                itemTitle="IRCC Rescheduler"
+                itemSubTitle="IX Design / Front-End Development"
                 itemLink="#"
-                itemImage="img/rosie-and-company.png"
+                itemImage="img/ircc-rescheduler.png"
                 dropOpacity="0.2"
               />
               <PortfolioItem
@@ -95,15 +120,15 @@ export default () => {
 
             <div className="row">
               <PortfolioItem
-                itemTitle="A Leading Sport Nation"
-                itemSubTitle="Production Assistant / Video Editing"
+                itemTitle="A Year of Sport"
+                itemSubTitle="PA / Video Editing"
                 itemLink="#"
                 itemImage="img/leading-sport-nation.png"
                 dropOpacity="0.6"
               />
               <PortfolioItem
-                itemTitle="Manion's Mud Logo"
-                itemSubTitle="Company Branding / Logo Design"
+                itemTitle="Manion's Mud"
+                itemSubTitle="Branding / Logo Design"
                 itemLink="#"
                 itemImage="img/manions-mud.png"
                 dropOpacity="0.6"
