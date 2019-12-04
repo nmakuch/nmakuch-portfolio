@@ -25,6 +25,7 @@ const homeStyles = css`
     section#portfolio-grid {
       .container {
         max-width: 1200px !important;
+        padding: 0 25px !important;
       }
     }
   }

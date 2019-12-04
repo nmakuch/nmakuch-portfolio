@@ -16,15 +16,14 @@ const navbarStyles = css`
 
   @media only screen and (max-width: 991px) {
     .container {
-      padding: 0 50px !important;
+      padding: 0 25px !important;
       max-width: 1200px !important;
     }
   }
 
   @media only screen and (max-width: 767px) {
     .container {
-      padding: 0 20px !important;
-      max-width: 600px !important;
+      max-width: 500px !important;
     }
   }
 `;
