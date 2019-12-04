@@ -24,7 +24,9 @@ class BannerH1 extends React.Component {
               text-align: center;
               line-height: 42px;
             }
+          }
 
+          @media only screen and (max-width: 515px) {
             .disappear {
               display: none;
             }

@@ -58,6 +58,14 @@ class PortfolioItem extends React.Component {
               }
             }
           }
+
+          @media only screen and (max-width: 767px) {
+            a {
+              .box {
+                padding: 75px;
+              }
+            }
+          }
         `}
         className="col-md-6 portfolio-item"
       >

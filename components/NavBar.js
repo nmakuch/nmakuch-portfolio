@@ -23,7 +23,7 @@ const navbarStyles = css`
 
   @media only screen and (max-width: 767px) {
     .container {
-      max-width: 500px !important;
+      max-width: 600px !important;
     }
   }
 `;

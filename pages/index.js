@@ -34,22 +34,17 @@ const homeStyles = css`
     section#portfolio-grid {
       .col-sm-12,
       .col-md-6 {
-        padding-right: 0 !important;
-        padding-left: 0 !important;
+        padding-right: 25px !important;
+        padding-left: 25px !important;
       }
       .container {
-        max-width: 500px !important;
+        max-width: 600px !important;
       }
     }
   }
 
   @media only screen and (max-width: 515px) {
     section#portfolio-grid {
-      .col-sm-12,
-      .col-md-6 {
-        padding-right: 15px !important;
-        padding-left: 15px !important;
-      }
       .container {
         max-width: 550px !important;
       }
@@ -72,7 +67,7 @@ export default () => {
               <PortfolioItem
                 itemTitle="Claim tax benefits"
                 itemSubTitle="IX Design / Front-End Development"
-                itemLink="#"
+                itemLink="/claim-tax-benefits"
                 itemImage="img/claim-tax-benefits.png"
                 dropOpacity="0.6"
               />
