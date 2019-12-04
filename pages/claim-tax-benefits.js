@@ -15,12 +15,16 @@ const ctbStyles = css`
       padding: 0 100px;
 
       h1 {
-        font-size: 24px;
+        font-size: 32px;
         font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      h2 {
+        font-size: 14px;
         margin-bottom: 20px;
         letter-spacing: 2px;
-        text-transform: uppercase;
-        padding-left: 25px;
+        padding-left: 3px;
       }
 
       img {
@@ -28,20 +32,17 @@ const ctbStyles = css`
       }
 
       p {
-        padding-left: 25px;
         margin-bottom: 43px;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 500;
       }
 
       a {
-        margin-left: 25px;
         font-size: 14px;
         padding: 16px 50px;
-        color: #fcd6d6;
+        color: white;
         font-weight: 500;
         background-color: #333;
-        text-transform: uppercase;
         letter-spacing: 2px;
       }
 
@@ -65,27 +66,38 @@ const ctbStyles = css`
 
   @media only screen and (max-width: 991px) {
     section#portfolio-header {
+      .link-container {
+        display: flex;
+        justify-content: center;
+      }
       .row {
         flex-direction: column-reverse;
 
         h1 {
           margin-bottom: 10px;
-          font-size: 28px;
+          font-size: 36px;
           padding-left: 0;
         }
 
+        h2 {
+          margin-bottom: 75px;
+          font-size: 16px;
+        }
+
         p {
-            padding-left: 0;
-            font-size: 16px;
+          padding-left: 0;
+          font-size: 16px;
         }
 
         img {
-            margin-bottom: 50px;
+          margin-bottom: 75px;
         }
 
         a {
-            padding: 20px 38%;
-            margin-left: 0;
+          padding: 20px 40px;
+          margin-left: 0;
+          font-size: 16px;
+          font-weight: 600;
         }
 
         .mobile-visible {
@@ -105,55 +117,23 @@ const ctbStyles = css`
     }
   }
 
-  @media only screen and (max-width: 767px) {
-      section#portfolio-header {
-          .row {
-              a {
-                  padding: 20px 36%;
-              }
-          }
-      }
-  }
-
   @media only screen and (max-width: 520px) {
     section#portfolio-header {
-        .row {
-            a {
-                padding: 20px 35%;
-            }
-        }
-    }
-}
+      .row {
+          a {
+              font-size: 14px;
+          }
 
-@media only screen and (max-width: 450px) {
-    section#portfolio-header {
-        .row {
-            a {
-                padding: 20px 32%;
-            }
-        }
-    }
-}
+          h1 {
+              font-size: 28px
+          }
 
-@media only screen and (max-width: 400px) {
-    section#portfolio-header {
-        .row {
-            a {
-                padding: 20px 30%;
-            }
-        }
+          h2 {
+              font-size: 14px;
+          }
+      }
     }
-}
-
-@media only screen and (max-width: 350px) {
-    section#portfolio-header {
-        .row {
-            a {
-                padding: 20px 27%;
-            }
-        }
-    }
-}
+  }
 `;
 
 export default () => {
@@ -164,19 +144,24 @@ export default () => {
           <div className="container">
             <div className="row">
               <div className="col-md-6 col-sm-6">
-                <h1 className="mobile-invisible">CRA Claim Tax Benefits</h1>
+                <h1 className="mobile-invisible">Claim Tax Benefits</h1>
+                <h2 className="mobile-invisible">
+                  IX Design / Front-End Development
+                </h2>
                 <p className="mobile-invisible">
-                  This is a service I am currently working on with the Canadian
-                  Digital Service. The project is in it's alpha phase. This
-                  application is being designed to help Canadians file their
-                  taxes. The main target users for this product are Canadian
-                  citizens whom are facing vulnerable financial situations.
+                  This pugJS application is being designed in partnership with
+                  the CRA to help Canadians in vulnerable financial situations
+                  file their taxes.
                 </p>
-                <a>View service</a>
+                <div className="link-container">
+                  <a>View online service</a>
+                </div>
               </div>
               <div className="col-md-6 col-sm-6">
-                <h1 className="mobile-visible">CRA Claim Tax Benefits</h1>
-                <p className="mobile-visible">IX Design / Front-End Development</p>
+                <h1 className="mobile-visible">Claim Tax Benefits</h1>
+                <h2 className="mobile-visible">
+                  IX Design / Front-End Development
+                </h2>
                 <img src="img/claim-tax-benefits.png" />
               </div>
             </div>
