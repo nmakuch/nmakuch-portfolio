@@ -74,7 +74,7 @@ export default () => {
               <PortfolioItem
                 itemTitle="Compliance UI"
                 itemSubTitle="IX Design / Front-End Development"
-                itemLink="#"
+                itemLink="/compliance-ui"
                 itemImage="img/security-goals.png"
                 dropOpacity="0.6"
               />
