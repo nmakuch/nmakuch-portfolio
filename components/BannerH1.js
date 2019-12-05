@@ -30,6 +30,17 @@ class BannerH1 extends React.Component {
             .disappear {
               display: none;
             }
+
+            h1 {
+              font-size: 28px;
+            }
+          }
+
+          @media only screen and (max-width: 350px) {
+            h1 {
+              font-size: 24px;
+              line-height: 38px;
+            }
           }
         `}
         id="banner-h1"

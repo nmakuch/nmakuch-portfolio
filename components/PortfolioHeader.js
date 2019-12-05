@@ -15,7 +15,7 @@ const portfolioHeaderStyles = css`
 
       h1 {
         font-size: 32px;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 4px;
       }
 
