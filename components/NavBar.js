@@ -18,6 +18,17 @@ const navbarStyles = css`
     .container {
       padding: 0 25px !important;
       max-width: 1200px !important;
+
+      #navbarResponsive {
+        a:first-of-type {
+          padding-top: 25px;
+        }
+
+        a:last-of-type {
+          padding-bottom: 25px;
+          border-bottom: 2px solid #333;
+        }
+      }
     }
   }
 
