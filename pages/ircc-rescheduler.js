@@ -5,19 +5,19 @@ import { jsx, css } from "@emotion/core";
 import Layout from "../components/Layout";
 import PortfolioHeader from "../components/PortfolioHeader";
 
-const complianceStyles = css``;
+const irccStyles = css``;
 
 export default () => {
   return (
-    <Layout contentClass={complianceStyles}>
+    <Layout contentClass={irccStyles}>
       <main>
         <PortfolioHeader
-          title="Compliance UI"
+          title="IRCC Rescheduler"
           subTitle="IX Design / Front-End Development"
-          description="This is an automated tool to check security standards on Github repos. I designed and developped the front-end interface."
-          linkURL="#"
+          description="A simple, accessible, server-rendered ReactJS application that allows immigrants to reschedule citizenship appointments online. Works with no JS."
+          linkURL="https://vancouver.rescheduler-dev.cds-snc.ca"
           linkText="View online service"
-          image="img/security-goals.png"
+          image="img/ircc-rescheduler.png"
         />
       </main>
     </Layout>

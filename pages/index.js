@@ -84,14 +84,14 @@ export default () => {
               <PortfolioItem
                 itemTitle="Rosie and Company: Dog Walking"
                 itemSubTitle="Web Design / Front-End Development"
-                itemLink="#"
+                itemLink="/rosie-and-company-dog"
                 itemImage="img/rosie-and-company.png"
                 dropOpacity="0.2"
               />
               <PortfolioItem
                 itemTitle="Rosie and Company: Maid Service"
                 itemSubTitle="Web Design / Front-End Development"
-                itemLink="#"
+                itemLink="/rosie-and-company-maid"
                 itemImage="img/rosies-ms.png"
                 dropOpacity="0.6"
               />
@@ -101,14 +101,14 @@ export default () => {
               <PortfolioItem
                 itemTitle="IRCC Rescheduler"
                 itemSubTitle="IX Design / Front-End Development"
-                itemLink="#"
+                itemLink="/ircc-rescheduler"
                 itemImage="img/ircc-rescheduler.png"
                 dropOpacity="0.2"
               />
               <PortfolioItem
                 itemTitle="Roberto and Rob"
                 itemSubTitle="Character Modelling / 3D Animation"
-                itemLink="#"
+                itemLink="/roberto-and-rob"
                 itemImage="img/roberto-and-rob.png"
                 dropOpacity="0.6"
               />
@@ -118,14 +118,14 @@ export default () => {
               <PortfolioItem
                 itemTitle="A Year of Sport"
                 itemSubTitle="PA / Video Editing"
-                itemLink="#"
+                itemLink="/year-of-sport"
                 itemImage="img/leading-sport-nation.png"
                 dropOpacity="0.6"
               />
               <PortfolioItem
                 itemTitle="Manion's Mud"
                 itemSubTitle="Branding / Logo Design"
-                itemLink="#"
+                itemLink="/manions-mud"
                 itemImage="img/manions-mud.png"
                 dropOpacity="0.6"
               />
