@@ -2,15 +2,31 @@
 /** @jsx jsx */
 
 import React from "react";
-import { jsx, Global } from "@emotion/core";
+import { css, jsx, Global } from "@emotion/core";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import Head from "next/head";
+import "./fonts.js";
 
 class Layout extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Global />
+        <Global
+          styles={css`
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span,
+            body {
+              font-family: Inter, sans-serif;
+            }
+          `}
+        />
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -27,6 +43,7 @@ class Layout extends React.Component {
         <div>
           <div css={this.props.contentClass}>{this.props.children}</div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

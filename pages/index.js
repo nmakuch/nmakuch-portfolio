@@ -2,158 +2,137 @@
 /** @jsx jsx */
 
 import { jsx, css } from "@emotion/core";
-import { useState } from "react";
+import PortfolioItem from "../components/PortfolioItem";
 import Layout from "../components/Layout";
+import BannerH1 from "../components/BannerH1";
 
 const homeStyles = css`
-  h1 {
-    margin-bottom: 15px;
+  section#portfolio-grid {
+    padding: 50px 0;
+
+    .col-md-6 {
+      padding-bottom: 6px;
+    }
+    .col-md-6:first-of-type {
+      padding-right: 3px;
+    }
+    .col-md-6:last-of-type {
+      padding-left: 3px;
+    }
   }
 
-  p {
-    margin-bottom: 50px;
+  @media only screen and (max-width: 991px) {
+    section#portfolio-grid {
+      .container {
+        max-width: 1200px !important;
+        padding: 0 25px !important;
+      }
+    }
   }
 
-  button {
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px 50px;
-    font-size: 18px;
-    margin-top: 25px;
+  @media only screen and (max-width: 767px) {
+    section#portfolio-grid {
+      .col-sm-12,
+      .col-md-6 {
+        padding-right: 25px !important;
+        padding-left: 25px !important;
+      }
+      .container {
+        max-width: 600px !important;
+      }
+    }
   }
 
-  .form-group {
-    margin-bottom: 25px;
-  }
-
-  section {
-    padding: 75px 25px;
+  @media only screen and (max-width: 515px) {
+    section#portfolio-grid {
+      .container {
+        max-width: 550px !important;
+      }
+    }
   }
 `;
 
 export default () => {
-  const [status, setStatus] = useState({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null }
-  });
-
-  const [inputs, setInputs] = useState({
-    email: "",
-    message: ""
-  });
-
-  const handleResponse = (status, msg) => {
-    if (status === 200) {
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: msg }
-      });
-      setInputs({
-        email: "",
-        message: ""
-      });
-    } else {
-      setStatus({
-        info: { error: true, msg: msg }
-      });
-    }
-  };
-
-  const handleOnChange = e => {
-    e.persist();
-    setInputs(prev => ({
-      ...prev,
-      [e.target.id]: e.target.value
-    }));
-    setStatus({
-      submitted: false,
-      submitting: false,
-      info: { error: false, msg: null }
-    });
-  };
-
-  const handleOnSubmit = async e => {
-    e.preventDefault();
-    setStatus(prevStatus => ({ ...prevStatus, submitting: true }));
-    const res = await fetch("/api/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(inputs)
-    });
-    const text = await res.text();
-    handleResponse(res.status, text);
-  };
-
   return (
     <Layout contentClass={homeStyles}>
       <main>
-        <section>
+        {/* Banner h1 section start */}
+        <BannerH1 />
+        {/* Banner h1 section end */}
+
+        {/* Portfolio grid start */}
+        <section id="portfolio-grid">
           <div className="container">
             <div className="row">
-              <div className="col-md-8 offset-md-2 col-sm-12">
-                <div className="block">
-                  <h1>Site is under construction</h1>
-                  <p>
-                    <strong>Note:</strong> If you'd like to get in touch, you
-                    can fill out the form below and I'll get back to you.
-                  </p>
-                </div>
-              </div>
+              <PortfolioItem
+                itemTitle="Claim tax benefits"
+                itemSubTitle="IX Design / Front-End Development"
+                itemLink="/claim-tax-benefits"
+                itemImage="img/claim-tax-benefits.png"
+                dropOpacity="0.6"
+              />
+              <PortfolioItem
+                itemTitle="Compliance UI"
+                itemSubTitle="IX Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/security-goals.png"
+                dropOpacity="0.6"
+              />
             </div>
+
             <div className="row">
-              <div className="col-md-8 offset-md-2 col-sm-12">
-                <div className="block">
-                  <form onSubmit={handleOnSubmit}>
-                    <div className="form-group">
-                      <h5>
-                        <label htmlFor="email">Email</label>
-                      </h5>
-                      <input
-                        id="email"
-                        type="email"
-                        className="form-control"
-                        onChange={handleOnChange}
-                        required
-                        value={inputs.email}
-                      />
-                    </div>
-                    <div className="form-group-2">
-                      <h5>
-                        <label htmlFor="message">Message</label>
-                      </h5>
-                      <textarea
-                        id="message"
-                        className="form-control"
-                        rows="4"
-                        onChange={handleOnChange}
-                        required
-                        value={inputs.message}
-                      />
-                    </div>
-                    <button type="submit" disabled={status.submitting}>
-                      {!status.submitting
-                        ? !status.submitted
-                          ? "Submit"
-                          : "Submitted"
-                        : "Submitting..."}
-                    </button>
-                    {status.info.error && (
-                      <div className="error">Error: {status.info.msg}</div>
-                    )}
-                    {!status.info.error && status.info.msg && (
-                      <div className="success">{status.info.msg}</div>
-                    )}
-                  </form>
-                </div>
-              </div>
+              <PortfolioItem
+                itemTitle="Rosie and Company: Dog Walking"
+                itemSubTitle="Web Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/rosie-and-company.png"
+                dropOpacity="0.2"
+              />
+              <PortfolioItem
+                itemTitle="Rosie and Company: Maid Service"
+                itemSubTitle="Web Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/rosies-ms.png"
+                dropOpacity="0.6"
+              />
+            </div>
+
+            <div className="row">
+              <PortfolioItem
+                itemTitle="IRCC Rescheduler"
+                itemSubTitle="IX Design / Front-End Development"
+                itemLink="#"
+                itemImage="img/ircc-rescheduler.png"
+                dropOpacity="0.2"
+              />
+              <PortfolioItem
+                itemTitle="Roberto and Rob"
+                itemSubTitle="Character Modelling / 3D Animation"
+                itemLink="#"
+                itemImage="img/roberto-and-rob.png"
+                dropOpacity="0.6"
+              />
+            </div>
+
+            <div className="row">
+              <PortfolioItem
+                itemTitle="A Year of Sport"
+                itemSubTitle="PA / Video Editing"
+                itemLink="#"
+                itemImage="img/leading-sport-nation.png"
+                dropOpacity="0.6"
+              />
+              <PortfolioItem
+                itemTitle="Manion's Mud"
+                itemSubTitle="Branding / Logo Design"
+                itemLink="#"
+                itemImage="img/manions-mud.png"
+                dropOpacity="0.6"
+              />
             </div>
           </div>
         </section>
+        {/* Portfolio grid end */}
       </main>
     </Layout>
   );

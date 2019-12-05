@@ -5,6 +5,40 @@ import { Component } from "react";
 import Link from "next/link";
 import Logo from "../components/Logo";
 
+const navbarStyles = css`
+  margin: 40px 0;
+  padding: 0 !important;
+
+  a {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .container {
+      padding: 0 25px !important;
+      max-width: 1200px !important;
+
+      #navbarResponsive {
+        a:first-of-type {
+          padding-top: 25px;
+        }
+
+        a:last-of-type {
+          padding-bottom: 25px;
+          border-bottom: 2px solid #333;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .container {
+      max-width: 600px !important;
+    }
+  }
+`;
+
 class Nav extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +61,10 @@ class Nav extends Component {
       ? "navbar-toggler navbar-toggler-right collapsed"
       : "navbar-toggler navbar-toggler-right";
     return (
-      <nav className="navbar navbar-expand-lg navbar-light transparent-nav">
+      <nav
+        css={navbarStyles}
+        className="navbar navbar-expand-lg navbar-light transparent-nav"
+      >
         <div className="container">
           <a className="navbar-brand" href="/">
             <Logo />
@@ -52,6 +89,13 @@ class Nav extends Component {
                   color: #333;
                   font-size: 16px;
                   font-weight: 500;
+                  transition: color 0.7s ease;
+                }
+
+                a:hover {
+                  text-decoration: none;
+                  color: #d64343;
+                  transition: color 0.7s ease;
                 }
 
                 @media only screen and (max-width: 992px) {
@@ -67,11 +111,11 @@ class Nav extends Component {
                 <a>Portfolio</a>
               </Link>
 
-              <Link href="/terms" as="/terms">
+              <Link href="/about" as="/about">
                 <a>About</a>
               </Link>
 
-              <Link href="/faq" as="/faq">
+              <Link href="/contact" as="/contact">
                 <a>Contact Me</a>
               </Link>
             </div>
