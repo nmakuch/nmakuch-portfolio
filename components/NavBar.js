@@ -6,7 +6,7 @@ import Link from "next/link";
 import Logo from "../components/Logo";
 
 const navbarStyles = css`
-  margin: 40px 0;
+  margin: 40px 0 40px 0;
   padding: 0 !important;
 
   a {
@@ -19,14 +19,18 @@ const navbarStyles = css`
       padding: 0 25px !important;
       max-width: 1200px !important;
 
+      a {
+        font-size: 18px;
+      }
+
       #navbarResponsive {
         a:first-of-type {
-          padding-top: 25px;
+          padding-top: 35px;
         }
 
         a:last-of-type {
-          padding-bottom: 25px;
-          border-bottom: 2px solid #333;
+          padding-bottom: 35px;
+          border-bottom: 1px solid rgba(0,0,0,0.2)
         }
       }
     }

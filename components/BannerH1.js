@@ -8,7 +8,7 @@ class BannerH1 extends React.Component {
     return (
       <section
         css={css`
-          padding: 50px 25px;
+          padding: 75px 25px 50px 25px;
 
           h1 {
             font-size: 36px;
