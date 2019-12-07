@@ -126,7 +126,7 @@ class PortfolioItem extends React.Component {
           @media only screen and (max-width: 400px) {
             a {
               .box {
-                padding: 35px 35px;
+                padding: 35px 35px 45px 35px;
               }
             }
 
@@ -144,7 +144,7 @@ class PortfolioItem extends React.Component {
           @media only screen and (max-width: 350px) {
             a {
               .box {
-                padding: 25px 25px;
+                padding: 35px 35px 45px 35px;
               }
             }
 
