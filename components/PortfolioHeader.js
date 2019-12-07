@@ -111,7 +111,7 @@ const portfolioHeaderStyles = css`
         }
 
         img {
-          margin-bottom: 75px;
+          margin-bottom: 50px;
         }
 
         a {
