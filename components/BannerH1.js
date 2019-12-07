@@ -70,7 +70,7 @@ class BannerH1 extends React.Component {
           @media only screen and (max-width: 400px) {
             h1 {
               font-size: 28px;
-              line-height: 34px;
+              line-height: 38px;
             }
           }
 
