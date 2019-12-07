@@ -33,6 +33,7 @@ const portfolioHeaderStyles = css`
         margin-bottom: 43px;
         font-size: 16px;
         font-weight: 400;
+        padding-right: 25px;
       }
 
       a {
@@ -70,10 +71,11 @@ const portfolioHeaderStyles = css`
         p {
           font-size: 14px;
           margin-bottom: 35px;
+          padding-right: 0;
         }
 
         a {
-            font-size: 12px;
+          font-size: 12px;
         }
       }
     }
@@ -92,25 +94,28 @@ const portfolioHeaderStyles = css`
           margin-bottom: 75px;
           font-size: 36px;
           padding-left: 0;
+          text-align: center;
         }
 
         h2 {
           margin-bottom: 10px;
           font-size: 16px;
+          text-align: center;
         }
 
         p {
           padding-left: 0;
           font-size: 16px;
           margin-bottom: 50px;
+          text-align: left;
         }
 
         img {
-          margin-bottom: 50px;
+          margin-bottom: 75px;
         }
 
         a {
-          padding: 20px 40px;
+          padding: 20px 42%;
           margin-left: 0;
           font-size: 16px;
           font-weight: 600;
@@ -118,7 +123,6 @@ const portfolioHeaderStyles = css`
 
         .mobile-visible {
           display: block;
-          text-align: center;
         }
 
         .mobile-invisible {
@@ -128,6 +132,16 @@ const portfolioHeaderStyles = css`
         .col-md-6 {
           max-width: 100%;
           padding: 0 10%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    section#portfolio-header {
+      .row {
+        a {
+          padding: 20px 39%;
         }
       }
     }
@@ -150,6 +164,36 @@ const portfolioHeaderStyles = css`
       }
     }
   }
+
+  @media only screen and (max-width: 450px) {
+    section#portfolio-header {
+      .row {
+        a {
+          padding: 20px 37%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    section#portfolio-header {
+      .row {
+        a {
+          padding: 20px 36%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    section#portfolio-header {
+      .row {
+        a {
+          padding: 20px 34%;
+        }
+      }
+    }
+  }
 `;
 
 class PortfolioHeader extends React.Component {
@@ -164,7 +208,9 @@ class PortfolioHeader extends React.Component {
                 <h1 className="mobile-invisible">{this.props.title}</h1>
                 <p className="mobile-invisible">{this.props.description}</p>
                 <div className="link-container">
-                  <a target="_blank" href={this.props.linkURL}>{this.props.linkText}</a>
+                  <a target="_blank" href={this.props.linkURL}>
+                    {this.props.linkText}
+                  </a>
                 </div>
               </div>
               <div className="col-md-6 col-sm-6">
