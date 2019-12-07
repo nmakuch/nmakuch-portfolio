@@ -11,12 +11,11 @@ class PortfolioItem extends React.Component {
           text-align: center;
 
           h2 {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 0px;
             line-height: 22px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
           }
 
           a {
@@ -62,6 +61,7 @@ class PortfolioItem extends React.Component {
           @media only screen and (max-width: 991px) {
             h2 {
               font-size: 14px;
+              margin-bottom: 5px;
             }
 
             p {
@@ -149,13 +149,13 @@ class PortfolioItem extends React.Component {
             }
 
             h2 {
-              font-size: 10px;
-              margin-bottom: 2px;
-              letter-spacing: 2px;
+              font-size: 12px;
+              line-height: 12px;
+              margin-bottom: 5px;
             }
 
             p {
-              font-size: 8px;
+              font-size: 10px;
               margin-bottom: 30px;
             }
           }

@@ -8,39 +8,77 @@ class BannerH1 extends React.Component {
     return (
       <section
         css={css`
-          padding: 75px 25px 50px 25px;
+          padding: 75px 25px 75px 25px;
 
           h1 {
             font-size: 36px;
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
             line-height: 48px;
-            letter-spacing: 1px;
           }
 
-          @media only screen and (max-width: 767px) {
+          @media only screen and (max-width: 1200px) {
             h1 {
-              font-size: 30px;
-              font-weight: 600;
+              font-size: 33px;
               text-align: center;
               line-height: 42px;
             }
           }
 
-          @media only screen and (max-width: 515px) {
+          @media only screen and (max-width: 991px) {
+            .container {
+              max-width: 900px;
+            }
+            h1 {
+              font-size: 32px;
+              text-align: center;
+              line-height: 42px;
+            }
+          }
+
+          @media only screen and (max-width: 767px) {
+            padding: 50px 25px 50px 25px;
+            h1 {
+              font-size: 34px;
+              text-align: center;
+              line-height: 48px;
+            }
+
             .disappear {
               display: none;
             }
 
+            .container {
+              max-width: 550px;
+            }
+          }
+
+          @media only screen and (max-width: 515px) {
             h1 {
-              font-size: 28px;
+              font-size: 32px;
+              line-height: 46px;
+            }
+          }
+
+          @media only screen and (max-width: 450px) {
+            h1 {
+              font-size: 26px;
+              line-height: 40px;
+            }
+          }
+
+          @media only screen and (max-width: 400px) {
+            h1 {
+              font-size: 22px;
+              line-height: 34px;
             }
           }
 
           @media only screen and (max-width: 350px) {
+            padding: 25px 15px 25px 15px;
             h1 {
-              font-size: 22px;
-              line-height: 36px;
+              font-size: 20px;
+              line-height: 30px;
             }
           }
         `}
@@ -52,7 +90,11 @@ class BannerH1 extends React.Component {
               <div className="block">
                 <h1>
                   Hi, I'm Nick Makuch! I'm an interaction designer based out of
-                  Ottawa, Ontario.<span className="disappear"> I make websites, graphics and videos.</span>
+                  Ottawa, Ontario.
+                  <span className="disappear">
+                    {" "}
+                    I make websites, graphics and videos.
+                  </span>
                 </h1>
               </div>
             </div>

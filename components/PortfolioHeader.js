@@ -14,7 +14,7 @@ const portfolioHeaderStyles = css`
     .row {
       h1 {
         font-size: 32px;
-        font-weight: 600;
+        font-weight: 800;
         margin-bottom: 20px;
       }
 
@@ -93,6 +93,7 @@ const portfolioHeaderStyles = css`
         h1 {
           margin-bottom: 75px;
           font-size: 36px;
+          font-weight: 800;
           padding-left: 0;
           text-align: center;
         }
@@ -104,14 +105,14 @@ const portfolioHeaderStyles = css`
         }
 
         p {
-          padding-left: 0;
+          padding: 0 10px;
           font-size: 16px;
           margin-bottom: 50px;
           text-align: left;
         }
 
         img {
-          margin-bottom: 50px;
+          margin-bottom: 25px;
         }
 
         a {
@@ -158,6 +159,11 @@ const portfolioHeaderStyles = css`
           font-size: 28px;
         }
 
+        p {
+            font-size: 14px;
+            padding-right: 0;
+        }
+
         h2 {
           font-size: 14px;
         }
@@ -168,8 +174,15 @@ const portfolioHeaderStyles = css`
   @media only screen and (max-width: 450px) {
     section#portfolio-header {
       .row {
+          h1 {
+              margin-bottom: 50px;
+          }
         a {
           padding: 20px 36.5%;
+        }
+
+        p {
+            padding-right: 15px;
         }
       }
     }
@@ -187,9 +200,27 @@ const portfolioHeaderStyles = css`
 
   @media only screen and (max-width: 350px) {
     section#portfolio-header {
+        padding: 75px 0;
       .row {
         a {
           padding: 20px 32.5%;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 12px;
+        }
+
+        img {
+            margin-bottom: 35px;
+        }
+
+        p {
+            padding-right: 5px;
+            margin-bottom: 40px;
         }
       }
     }

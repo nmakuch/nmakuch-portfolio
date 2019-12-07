@@ -65,7 +65,7 @@ export default () => {
           <div className="container">
             <div className="row">
               <PortfolioItem
-                itemTitle="Claim tax benefits"
+                itemTitle="Claim Tax Benefits"
                 itemSubTitle="IX Design / Front-End Development"
                 itemLink="/claim-tax-benefits"
                 itemImage="img/claim-tax-benefits.png"
