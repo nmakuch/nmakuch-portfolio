@@ -61,7 +61,7 @@ class PortfolioItem extends React.Component {
           @media only screen and (max-width: 991px) {
             h2 {
               font-size: 18px;
-              margin-bottom: 5px;
+              margin-bottom: 10px;
             }
 
             p {
