@@ -6,23 +6,22 @@ import { css, jsx } from "@emotion/core";
 const portfolioHeaderStyles = css`
   section {
     padding: 100px 0;
+    margin-bottom: 50px;
   }
 
   section#portfolio-header {
     background-color: #fcd6d6;
     .row {
-      padding: 0 100px;
-
       h1 {
         font-size: 32px;
-        font-weight: 600;
-        margin-bottom: 4px;
+        font-weight: 800;
+        margin-bottom: 20px;
       }
 
       h2 {
         font-size: 14px;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
+        margin-bottom: 15px;
+        font-weight: 500;
         padding-left: 3px;
       }
 
@@ -33,7 +32,8 @@ const portfolioHeaderStyles = css`
       p {
         margin-bottom: 43px;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
+        padding-right: 25px;
       }
 
       a {
@@ -58,7 +58,25 @@ const portfolioHeaderStyles = css`
   @media only screen and (max-width: 1200px) {
     section#portfolio-header {
       .row {
-        padding: 0 0;
+        h1 {
+          font-size: 28px;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 35px;
+          padding-right: 0;
+        }
+
+        a {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -73,27 +91,32 @@ const portfolioHeaderStyles = css`
         flex-direction: column-reverse;
 
         h1 {
-          margin-bottom: 10px;
+          margin-bottom: 75px;
           font-size: 36px;
+          font-weight: 800;
           padding-left: 0;
+          text-align: center;
         }
 
         h2 {
-          margin-bottom: 75px;
+          margin-bottom: 10px;
           font-size: 16px;
+          text-align: center;
         }
 
         p {
-          padding-left: 0;
+          padding: 0 10px;
           font-size: 16px;
+          margin-bottom: 50px;
+          text-align: left;
         }
 
         img {
-          margin-bottom: 75px;
+          margin-bottom: 25px;
         }
 
         a {
-          padding: 20px 40px;
+          padding: 20px 41%;
           margin-left: 0;
           font-size: 16px;
           font-weight: 600;
@@ -101,7 +124,6 @@ const portfolioHeaderStyles = css`
 
         .mobile-visible {
           display: block;
-          text-align: center;
         }
 
         .mobile-invisible {
@@ -111,6 +133,16 @@ const portfolioHeaderStyles = css`
         .col-md-6 {
           max-width: 100%;
           padding: 0 10%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    section#portfolio-header {
+      .row {
+        a {
+          padding: 20px 38%;
         }
       }
     }
@@ -127,8 +159,68 @@ const portfolioHeaderStyles = css`
           font-size: 28px;
         }
 
+        p {
+            font-size: 14px;
+            padding-right: 0;
+        }
+
         h2 {
           font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    section#portfolio-header {
+      .row {
+          h1 {
+              margin-bottom: 50px;
+          }
+        a {
+          padding: 20px 36.5%;
+        }
+
+        p {
+            padding-right: 15px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    section#portfolio-header {
+      .row {
+        a {
+          padding: 20px 35%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    section#portfolio-header {
+        padding: 75px 0;
+      .row {
+        a {
+          padding: 20px 32.5%;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 12px;
+        }
+
+        img {
+            margin-bottom: 35px;
+        }
+
+        p {
+            padding-right: 5px;
+            margin-bottom: 40px;
         }
       }
     }
@@ -143,19 +235,20 @@ class PortfolioHeader extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-6 col-sm-6">
-                <h1 className="mobile-invisible">{this.props.title}</h1>
                 <h2 className="mobile-invisible">{this.props.subTitle}</h2>
+                <h1 className="mobile-invisible">{this.props.title}</h1>
                 <p className="mobile-invisible">{this.props.description}</p>
                 <div className="link-container">
-                  <a href={this.props.linkURL}>{this.props.linkText}</a>
+                  <a target="_blank" href={this.props.linkURL}>
+                    {this.props.linkText}
+                  </a>
                 </div>
               </div>
               <div className="col-md-6 col-sm-6">
+                <h2 className="mobile-visible">{this.props.subTitle}</h2>
                 <h1 className="mobile-visible">{this.props.title}</h1>
-                <h2 className="mobile-visible">
-                {this.props.subTitle}
-                </h2>
                 <img src={this.props.image} />
+                <p className="mobile-visible">{this.props.description}</p>
               </div>
             </div>
           </div>

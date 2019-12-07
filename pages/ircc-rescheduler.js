@@ -14,9 +14,9 @@ export default () => {
         <PortfolioHeader
           title="IRCC Rescheduler"
           subTitle="IX Design / Front-End Development"
-          description="A simple, accessible, server-rendered ReactJS application that allows immigrants to reschedule citizenship appointments online. Works with no JS."
+          description="This is a service that was designed in partnership with the Canada Revenue Agency (CRA). It's purpose is to help Canadians exposed to vulnerable financial situations. The service was built as a server-rendered ReactJS application and supports a no JS environment."
           linkURL="https://vancouver.rescheduler-dev.cds-snc.ca"
-          linkText="View online service"
+          linkText="View site"
           image="img/ircc-rescheduler.png"
         />
       </main>

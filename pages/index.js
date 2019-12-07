@@ -65,7 +65,7 @@ export default () => {
           <div className="container">
             <div className="row">
               <PortfolioItem
-                itemTitle="Claim tax benefits"
+                itemTitle="Claim Tax Benefits"
                 itemSubTitle="IX Design / Front-End Development"
                 itemLink="/claim-tax-benefits"
                 itemImage="img/claim-tax-benefits.png"
@@ -82,14 +82,14 @@ export default () => {
 
             <div className="row">
               <PortfolioItem
-                itemTitle="Rosie and Company: Dog Walking"
+                itemTitle="Rosie & Co. Dog Walking"
                 itemSubTitle="Web Design / Front-End Development"
                 itemLink="/rosie-and-company-dog"
                 itemImage="img/rosie-and-company.png"
                 dropOpacity="0.2"
               />
               <PortfolioItem
-                itemTitle="Rosie and Company: Maid Service"
+                itemTitle="Rosie & Co. Maid Service"
                 itemSubTitle="Web Design / Front-End Development"
                 itemLink="/rosie-and-company-maid"
                 itemImage="img/rosies-ms.png"
@@ -100,7 +100,7 @@ export default () => {
             <div className="row">
               <PortfolioItem
                 itemTitle="IRCC Rescheduler"
-                itemSubTitle="IX Design / Front-End Development"
+                itemSubTitle="IX Design / Front-End Dev"
                 itemLink="/ircc-rescheduler"
                 itemImage="img/ircc-rescheduler.png"
                 dropOpacity="0.2"

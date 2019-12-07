@@ -47,6 +47,12 @@ const footerStyles = css`
     margin-bottom: 50px;
     font-weight: 600;
   }
+
+  @media only screen and (max-width: 350px) {
+    footer .footer-manu ul li {
+      padding: 0 15px 15px 15px;
+    }
+  }
 `;
 
 class Footer extends React.Component {
