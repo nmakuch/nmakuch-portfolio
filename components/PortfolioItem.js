@@ -112,7 +112,7 @@ class PortfolioItem extends React.Component {
             }
 
             h2 {
-              font-size: 14px;
+              font-size: 18px;
               margin-bottom: 5px;
             }
 
@@ -130,7 +130,7 @@ class PortfolioItem extends React.Component {
             }
 
             h2 {
-              font-size: 12px;
+              font-size: 16px;
               margin-bottom: 5px;
             }
 
@@ -143,12 +143,12 @@ class PortfolioItem extends React.Component {
           @media only screen and (max-width: 350px) {
             a {
               .box {
-                padding: 35px 35px 45px 35px;
+                padding: 45px 35px 45px 35px;
               }
             }
 
             h2 {
-              font-size: 12px;
+              font-size: 14px;
               line-height: 12px;
               margin-bottom: 5px;
             }
