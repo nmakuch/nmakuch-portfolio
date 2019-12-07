@@ -16,7 +16,7 @@ export default () => {
           subTitle="Production Assistant / Video Editing"
           description="This was a commercial produced by Heritage Canada during the 2016 World Juniors for mens hockey. This project was produced in partnership with Sports Canada and had a limited budget of around $50K. The short was filmed on a Red Dragon camera and edited in house."
           linkURL="https://www.youtube.com/watch?v=-_NM2_0oDDQ"
-          linkText="View commercial"
+          linkText="View short"
           image="img/leading-sport-nation.png"
         />
       </main>

@@ -16,7 +16,7 @@ export default () => {
           subTitle="IX Design / Front-End Development"
           description="This is a service that was designed in partnership with the Canada Revenue Agency (CRA). It's purpose is to help Canadians exposed to vulnerable financial situations. The service was built as a server-rendered ReactJS application and supports a no JS environment."
           linkURL="https://vancouver.rescheduler-dev.cds-snc.ca"
-          linkText="View online service"
+          linkText="View site"
           image="img/ircc-rescheduler.png"
         />
       </main>

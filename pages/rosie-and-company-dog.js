@@ -16,7 +16,7 @@ export default () => {
           subTitle="Web Design / Front-End Development"
           description="This is a website I designed for a Toronto dog walking business. The site was built using Hugo, a static site generating framework developped by Google. Rosieandcompany.ca is a static 3 page website that uses Formspree to handle contact form submissions."
           linkURL="https://rosieandcompany.ca"
-          linkText="View live website"
+          linkText="View site"
           image="img/rosie-and-company.png"
         />
       </main>

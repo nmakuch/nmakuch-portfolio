@@ -16,7 +16,7 @@ export default () => {
           subTitle="Web Design / Front-End Development"
           description="This is a website I designed for a Toronto maid cleaning service. The website was built using NextJS and EmotionJS. The service helps the client and users calculate or book appointments by email. These emails are being sent using the Sendgrid API."
           linkURL="https://rosiesmaidservice.ca"
-          linkText="View live website"
+          linkText="View site"
           image="img/rosies-ms.png"
         />
       </main>

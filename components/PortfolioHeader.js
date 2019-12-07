@@ -115,7 +115,7 @@ const portfolioHeaderStyles = css`
         }
 
         a {
-          padding: 20px 42%;
+          padding: 20px 41%;
           margin-left: 0;
           font-size: 16px;
           font-weight: 600;
@@ -141,7 +141,7 @@ const portfolioHeaderStyles = css`
     section#portfolio-header {
       .row {
         a {
-          padding: 20px 39%;
+          padding: 20px 38%;
         }
       }
     }
@@ -169,7 +169,7 @@ const portfolioHeaderStyles = css`
     section#portfolio-header {
       .row {
         a {
-          padding: 20px 37%;
+          padding: 20px 36.5%;
         }
       }
     }
@@ -179,7 +179,7 @@ const portfolioHeaderStyles = css`
     section#portfolio-header {
       .row {
         a {
-          padding: 20px 36%;
+          padding: 20px 35%;
         }
       }
     }
@@ -189,7 +189,7 @@ const portfolioHeaderStyles = css`
     section#portfolio-header {
       .row {
         a {
-          padding: 20px 34%;
+          padding: 20px 32.5%;
         }
       }
     }
