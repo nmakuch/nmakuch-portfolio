@@ -12,7 +12,7 @@ class Layout extends React.Component {
     return (
       <React.Fragment>
         <link
-          href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap"
           rel="stylesheet"
         />
         <link
@@ -32,7 +32,7 @@ class Layout extends React.Component {
             p,
             span,
             body {
-              font-family: "Poppins", sans-serif;
+              font-family: "Roboto", sans-serif;
             }
           `}
         />

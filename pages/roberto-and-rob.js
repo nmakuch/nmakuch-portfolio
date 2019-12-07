@@ -14,9 +14,9 @@ export default () => {
         <PortfolioHeader
           title="Roberto and Rob"
           subTitle="Character Modelling / 3D Animation"
-          description="A 60 second short film I produced while in university. Motion capture, 3D modelling/animation, and video editing were done by me."
-          linkURL="https://vancouver.rescheduler-dev.cds-snc.ca"
-          linkText="View animation"
+          description="A 60 second short film I produced while in university. We had 4 months to complete this project and all work was done individually. I created all 3D models and environments seen in the short. I then rigged these characters and recorded motion capture profiles for them in a studio."
+          linkURL="https://www.youtube.com/watch?v=b0Bv7KuAJZA"
+          linkText="View 3D animation"
           image="img/roberto-and-rob.png"
         />
       </main>

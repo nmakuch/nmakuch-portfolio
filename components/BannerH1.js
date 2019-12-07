@@ -15,6 +15,7 @@ class BannerH1 extends React.Component {
             font-weight: 600;
             text-align: center;
             line-height: 48px;
+            letter-spacing: 1px;
           }
 
           @media only screen and (max-width: 767px) {
@@ -38,8 +39,8 @@ class BannerH1 extends React.Component {
 
           @media only screen and (max-width: 350px) {
             h1 {
-              font-size: 24px;
-              line-height: 38px;
+              font-size: 22px;
+              line-height: 36px;
             }
           }
         `}

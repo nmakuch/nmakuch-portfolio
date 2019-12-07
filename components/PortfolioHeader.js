@@ -6,23 +6,22 @@ import { css, jsx } from "@emotion/core";
 const portfolioHeaderStyles = css`
   section {
     padding: 100px 0;
+    margin-bottom: 50px;
   }
 
   section#portfolio-header {
     background-color: #fcd6d6;
     .row {
-      padding: 0 100px;
-
       h1 {
         font-size: 32px;
         font-weight: 600;
-        margin-bottom: 4px;
+        margin-bottom: 20px;
       }
 
       h2 {
         font-size: 14px;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
+        margin-bottom: 15px;
+        font-weight: 500;
         padding-left: 3px;
       }
 
@@ -33,7 +32,7 @@ const portfolioHeaderStyles = css`
       p {
         margin-bottom: 43px;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
       }
 
       a {
@@ -58,7 +57,24 @@ const portfolioHeaderStyles = css`
   @media only screen and (max-width: 1200px) {
     section#portfolio-header {
       .row {
-        padding: 0 0;
+        h1 {
+          font-size: 28px;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 35px;
+        }
+
+        a {
+            font-size: 12px;
+        }
       }
     }
   }
@@ -73,23 +89,24 @@ const portfolioHeaderStyles = css`
         flex-direction: column-reverse;
 
         h1 {
-          margin-bottom: 10px;
+          margin-bottom: 75px;
           font-size: 36px;
           padding-left: 0;
         }
 
         h2 {
-          margin-bottom: 75px;
+          margin-bottom: 10px;
           font-size: 16px;
         }
 
         p {
           padding-left: 0;
           font-size: 16px;
+          margin-bottom: 50px;
         }
 
         img {
-          margin-bottom: 75px;
+          margin-bottom: 50px;
         }
 
         a {
@@ -143,19 +160,18 @@ class PortfolioHeader extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-6 col-sm-6">
-                <h1 className="mobile-invisible">{this.props.title}</h1>
                 <h2 className="mobile-invisible">{this.props.subTitle}</h2>
+                <h1 className="mobile-invisible">{this.props.title}</h1>
                 <p className="mobile-invisible">{this.props.description}</p>
                 <div className="link-container">
-                  <a href={this.props.linkURL}>{this.props.linkText}</a>
+                  <a target="_blank" href={this.props.linkURL}>{this.props.linkText}</a>
                 </div>
               </div>
               <div className="col-md-6 col-sm-6">
+                <h2 className="mobile-visible">{this.props.subTitle}</h2>
                 <h1 className="mobile-visible">{this.props.title}</h1>
-                <h2 className="mobile-visible">
-                {this.props.subTitle}
-                </h2>
                 <img src={this.props.image} />
+                <p className="mobile-visible">{this.props.description}</p>
               </div>
             </div>
           </div>

@@ -11,11 +11,12 @@ class PortfolioItem extends React.Component {
           text-align: center;
 
           h2 {
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 17px;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             line-height: 22px;
+            margin-bottom: 5px;
           }
 
           a {
@@ -52,7 +53,21 @@ class PortfolioItem extends React.Component {
             margin-bottom: 50px;
           }
 
+          @media only screen and (max-width: 1200px) {
+            h2 {
+              font-size: 16px;
+            }
+          }
+
           @media only screen and (max-width: 991px) {
+            h2 {
+              font-size: 14px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+
             a {
               .box {
                 padding: 50px;
@@ -61,6 +76,13 @@ class PortfolioItem extends React.Component {
           }
 
           @media only screen and (max-width: 767px) {
+            h2 {
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 16px;
+            }
             a {
               .box {
                 padding: 75px;
@@ -69,6 +91,13 @@ class PortfolioItem extends React.Component {
           }
 
           @media only screen and (max-width: 520px) {
+            h2 {
+              font-size: 16px;
+            }
+
+            p {
+              font-size: 12px;
+            }
             a {
               .box {
                 padding: 50px 40px;
@@ -76,7 +105,7 @@ class PortfolioItem extends React.Component {
             }
           }
 
-          @media only screen and (max-width: 400px) {
+          @media only screen and (max-width: 450px) {
             a {
               .box {
                 padding: 50px 30px;
@@ -84,17 +113,17 @@ class PortfolioItem extends React.Component {
             }
 
             h2 {
-              font-size: 12px;
+              font-size: 14px;
               margin-bottom: 5px;
             }
 
             p {
-              font-size: 10px;
-              margin-bottom: 25px;
+              font-size: 12px;
+              margin-bottom: 50px;
             }
           }
 
-          @media only screen and (max-width: 350px) {
+          @media only screen and (max-width: 400px) {
             a {
               .box {
                 padding: 35px 35px;
@@ -108,7 +137,26 @@ class PortfolioItem extends React.Component {
 
             p {
               font-size: 10px;
-              margin-bottom: 25px;
+              margin-bottom: 50px;
+            }
+          }
+
+          @media only screen and (max-width: 350px) {
+            a {
+              .box {
+                padding: 25px 25px;
+              }
+            }
+
+            h2 {
+              font-size: 10px;
+              margin-bottom: 2px;
+              letter-spacing: 2px;
+            }
+
+            p {
+              font-size: 8px;
+              margin-bottom: 30px;
             }
           }
         `}
