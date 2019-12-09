@@ -6,7 +6,6 @@ import { css, jsx } from "@emotion/core";
 const portfolioHeaderStyles = css`
   section {
     padding: 100px 0;
-    margin-bottom: 50px;
   }
 
   section#portfolio-header {
@@ -22,7 +21,6 @@ const portfolioHeaderStyles = css`
         font-size: 14px;
         margin-bottom: 15px;
         font-weight: 500;
-        padding-left: 3px;
       }
 
       img {
@@ -33,7 +31,6 @@ const portfolioHeaderStyles = css`
         margin-bottom: 43px;
         font-size: 16px;
         font-weight: 400;
-        padding-right: 25px;
       }
 
       a {
@@ -42,7 +39,7 @@ const portfolioHeaderStyles = css`
         color: white;
         font-weight: 500;
         background-color: #333;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
       }
 
       .mobile-visible {
@@ -71,7 +68,6 @@ const portfolioHeaderStyles = css`
         p {
           font-size: 14px;
           margin-bottom: 35px;
-          padding-right: 0;
         }
 
         a {
@@ -89,6 +85,10 @@ const portfolioHeaderStyles = css`
       }
       .row {
         flex-direction: column-reverse;
+
+        .offset-md-1 {
+            margin: 0;
+        }
 
         h1 {
           margin-bottom: 75px;
@@ -112,11 +112,11 @@ const portfolioHeaderStyles = css`
         }
 
         img {
-          margin-bottom: 25px;
+          margin-bottom: 75px;
         }
 
         a {
-          padding: 20px 41%;
+          padding: 20px 125px;
           margin-left: 0;
           font-size: 16px;
           font-weight: 600;
@@ -130,7 +130,7 @@ const portfolioHeaderStyles = css`
           display: none;
         }
 
-        .col-md-6 {
+        .col-md-5 {
           max-width: 100%;
           padding: 0 10%;
         }
@@ -234,7 +234,7 @@ class PortfolioHeader extends React.Component {
         <section id="portfolio-header">
           <div className="container">
             <div className="row">
-              <div className="col-md-6 col-sm-6">
+              <div className="col-md-5 offset-md-1 col-sm-12">
                 <h2 className="mobile-invisible">{this.props.subTitle}</h2>
                 <h1 className="mobile-invisible">{this.props.title}</h1>
                 <p className="mobile-invisible">{this.props.description}</p>
@@ -244,11 +244,10 @@ class PortfolioHeader extends React.Component {
                   </a>
                 </div>
               </div>
-              <div className="col-md-6 col-sm-6">
+              <div className="col-md-5 col-sm-12">
                 <h2 className="mobile-visible">{this.props.subTitle}</h2>
                 <h1 className="mobile-visible">{this.props.title}</h1>
                 <img src={this.props.image} />
-                <p className="mobile-visible">{this.props.description}</p>
               </div>
             </div>
           </div>
